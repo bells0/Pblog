@@ -6,7 +6,22 @@ public class ArticleComment {
         private Integer id;
         private Integer articleId;
         private Integer commentId;
-        private Timestamp createByDate;
+
+    public ArticleComment(Integer id) {
+        this.id = id;
+    }
+
+    @Override
+    public String toString() {
+        return "ArticleComment{" +
+                "id=" + id +
+                ", articleId=" + articleId +
+                ", commentId=" + commentId +
+                ", createByDate=" + createByDate +
+                '}';
+    }
+
+    private Timestamp createByDate;
 
     public Integer getId() {
         return id;
