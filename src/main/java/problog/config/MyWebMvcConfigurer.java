@@ -40,7 +40,7 @@ public class MyWebMvcConfigurer implements WebMvcConfigurer {
     @Override
     public void addViewControllers(ViewControllerRegistry registry){
         //视图跳转控制器
-        registry.addViewController("/").setViewName("/login");
+        registry.addViewController("/login").setViewName("/login");
         registry.addViewController("/loginOut").setViewName("/login");
         registry.addViewController("/index.html").setViewName("/index");
         registry.addViewController("/main").setViewName("/index");
@@ -66,6 +66,6 @@ public class MyWebMvcConfigurer implements WebMvcConfigurer {
      */
     @Override
     public void addInterceptors(InterceptorRegistry registry){
-        registry.addInterceptor(loginInterceptor).addPathPatterns("/**").excludePathPatterns("/","/user/login","/css/**","/js/**","/img/**","/fonts/**","/bootstrap/**");
+        registry.addInterceptor(loginInterceptor).addPathPatterns("/**").excludePathPatterns("/","/user/login","/css/**","/js/**","/img/**","/fonts/**","/bootstrap/**","/login","/login/success","/login/fail");
     }
 }
