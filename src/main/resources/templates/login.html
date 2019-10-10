@@ -35,7 +35,7 @@
 	<h2 class="text-center" style="color:black;">后台管理中心</h2>
 	<div class="col-sm-8 col-md-5 center-auto pd-sm-50 pd-xs-20 main_content">
 		<p class="text-center font16">用户登录</p>
-		<form action="/login" th:href="@{/user/login}" method="post">
+	<!---->	<form action="/login" th:href="@{/user/login}" method="post">
 			<p style="color: red" th:text="${msg}" th:if="${not #strings.isEmpty(msg)}" ></p>
 			<div class="form-group mg-t20">
 				<i class="icon-user icon_font"></i>
@@ -48,7 +48,7 @@
 			</div>
 			<div class="checkbox mg-b25">
 				<label>
-					<input type="checkbox" id="remember" name="remember" value="true" checked="checked"/>记住用户名
+					<input type="checkbox" id="remember" name="remember-me" value="true" checked="checked"/>记住用户名
 				</label>
 
 				<label class="forget"><a href="">忘记密码</a></label>

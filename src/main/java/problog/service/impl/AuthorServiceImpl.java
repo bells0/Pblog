@@ -16,12 +16,13 @@ public class AuthorServiceImpl implements AuthorService {
     private AuthorMapper authorMapper;
 
 
+    // 根据用户名称查询
     @Override
     public Author SelectByName(String username) {
-        System.out.println(username);
         return authorMapper.SelectByName(username);
     }
 
+    // 根据用户ID查询
     @Override
     public Author SelectById(Integer id) {
         return authorMapper.SelectById(id);

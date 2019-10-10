@@ -1,13 +1,9 @@
 package problog.controller;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
-import problog.domain.User.Author;
 import problog.domain.User.User;
-import problog.service.AuthorService;
 import problog.utils.FindUser;
 
 import javax.servlet.http.Cookie;
@@ -26,41 +22,32 @@ import java.util.Objects;
 @Controller
 public class LoginController {
 
-    static Map<Integer,User> data;
 
-   /* static{
+
+
+
+
+
+
+   /* static Map<Integer,User> data;
+
+    static{
         //定义一个数据库，存放用户数据
         data = new HashMap<Integer, User>();
         data.put(1,new User("admin","88888888"));
         data.put(2,new User("zhangsan","123456"));
         data.put(3,new User("lisi","00000000"));
-    }*/
+    }
 
-    /**
+    *//**
      *后台登录操作
-     *
+     * @param httpServletRequest
+     * @param httpServletResponse
+     * @return
      * @throws IOException
-     */
-    /*@PostMapping(value = "/user/login")
-    public String login(){
-        return "redirect:/login.html";
-    }*/
+     *//*
 
-    @RequestMapping(value = "/login/success")
-    public String loginSuccess(){
-
-            return "redirect:/index.html";
-
-    }
-    @RequestMapping(value = "/login/fail")
-    public String loginFail(){
-
-        return "redirect:/error.html";
-
-    }
-
-
-    /*@PostMapping(value = "/user/login")
+    @PostMapping(value = "/user/login")
     public String login(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Map<String,Object> map){
 
         String username = httpServletRequest.getParameter("username");
@@ -81,9 +68,9 @@ public class LoginController {
         }else{
             httpServletRequest.getSession().setAttribute("user",null);
             map.put("msg","用户名密码错误");
-           return "login";
+            return "login";
         }
-    }*/
+    }
 
     @RequestMapping(value = "/loginOut")
     public String loginOut(HttpServletRequest httpServletRequest){
@@ -93,8 +80,6 @@ public class LoginController {
             session.removeAttribute("user");
         }
         return "login";
-    }
-
-
+    }*/
 }
 

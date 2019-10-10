@@ -1,3 +1,4 @@
+
 spring:
   datasource:
     username: root
@@ -15,6 +16,6 @@ spring:
 mybatis:
   configuration:
     map-underscore-to-camel-case: true
- # mapper-locations: classpath*: problog.mapper.User/*.xml
- # type-aliases-package: problog.domain
+server:
+  port: 8081
 
